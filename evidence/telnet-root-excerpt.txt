@@ -1,0 +1,13 @@
+Owner-authorized U1000 Telnet observation, 2026-11-16 UTC.
+Selected output from a longer read-only session; intervening command echoes
+and unrelated output are explicitly omitted below. No password prompt was
+observed between submitting the username and receiving the root shell.
+
+AmbaLink login: root
+[shell command echo and unrelated output omitted]
+uid=0(root) gid=0(root) groups=0(root),10(wheel)
+Linux AmbaLink 4.9.76 #1 SMP PREEMPT Thu Oct 27 10:52:49 KST 2022 aarch64 GNU/Linux
+
+Context: an owner-controlled local hotspot and research-configured unit.
+See docs/methodology.md for configuration and version-verification limits.
+This excerpt does not assert a separately verified factory-reset reproduction.

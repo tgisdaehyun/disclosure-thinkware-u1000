@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "description": "Sanitized index of retained local analysis records. Evidence IDs are not public retrieval URLs. Analyst observations are summaries, not original source.",
+  "records": [
+    {
+      "component_id": "rtos",
+      "procedure_query": "0xa8254",
+      "evidence_id": "ev_815d845bdcc873149c62f41c9a0ecec908fe5ebb9afeb854eb8b45a17ab021b0",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Command manager dispatches file and status requests."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0xa51ac",
+      "evidence_id": "ev_5ca74778be191e3350c04ac9cce7db4871913fca05156247b92aa747ce2a9e14",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "GET_FILE parses the requested filename and passes its conversion to a type-1 Linux data request."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0xa41d0",
+      "evidence_id": "ev_67d1b08c7f79ee18364eec280d924506775fd5d91077b04dd5c56710b25f9372",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "An absolute filename beginning with slash is copied unchanged; no recording-root confinement in this branch."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0xa7c88",
+      "evidence_id": "ev_68ed681f9c10b6f0a5b22329defc0953f646a2c20df2688ad486f50ad7629c58",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "PUT_FILE parses filename, offset, size and MD5; passes converted filename to type-5 request."
+    },
+    {
+      "component_id": "linux-data-library",
+      "procedure_query": "0x105cac",
+      "evidence_id": "ev_b560d98c7b79c4dc3985de364d8092c5df5670b8d465e070291e1870d8f0b298",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "RPC adapter copies incoming filename into the transfer request."
+    },
+    {
+      "component_id": "linux-data-library",
+      "procedure_query": "0x1033a4",
+      "evidence_id": "ev_bdcd1211d77d9b354a6eee9ee19d2946632eb0c18454da94749176a138488ee5",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Request dispatcher queues a data job containing the requested filename."
+    },
+    {
+      "component_id": "linux-data-library",
+      "procedure_query": "0x103760",
+      "evidence_id": "ev_ec09d2db70b4647c52b323741275fc1d5e59f88734e4909314fafbb54c1c53f4",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Worker type 5 uses the file-open wrapper for its filename."
+    },
+    {
+      "component_id": "linux-data-library",
+      "procedure_query": "0x103ef8",
+      "evidence_id": "ev_54a195085258d671ba49eafe5aaa6d9213fd8e6bd6961bef070d854cf154bed4",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Offset-zero write wrapper uses open64(path,0x101241,0777); other offsets use 0x101002."
+    },
+    {
+      "component_id": "linux-data-library",
+      "procedure_query": "0x104d74",
+      "evidence_id": "ev_d8edec3b5b1162ed7211a7cfa5f85b2fee9d8e5d0263983dd8ce6a055e7d3feb",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Read worker directly uses fopen64(job.filename,\"rb\") and sends read bytes."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0x54e708",
+      "evidence_id": "ev_4d8cd7b41bf9adc45462f6e7ca4007d412329103379f46712115f8de69cb49bf",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "wifi_info handler reads configuration, logs credentials, and constructs an ssid/password response."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0x552f40",
+      "evidence_id": "ev_0506f50d409e292c11cc9ff4ab1cc24d7ed74010d25cbbf54f084faa481f23d0",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "GET_STATUS dispatcher selects the wifi_info handler from a 24-byte-entry table."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0xa47c0",
+      "evidence_id": "ev_0a2fc9431a0a4e3dbf49f1bb00898e2446ee42ad710bd6997f25b7d18e6a4465",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "New session token allocated from incrementing positive counter."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0xa75ec",
+      "evidence_id": "ev_2f307b34b338a32b12728bfc4ee72ba431a609eabba3498006bebd7a1067ce97",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Initialization copies the caller-provided admission callback into the receiver global."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0x4d674",
+      "evidence_id": "ev_600ee2322f26208fc853593eed3833b0af404b2bb9b0eb5c3fa396d4b0c218c6",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Application initialization supplies 0x00049EC8 as that callback."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0x49ec8",
+      "evidence_id": "ev_e7eaad9a58ca0e2ddca4017c003831b7057ecfb0ff01c751845e02b1d4817d37",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "Callback compares internal state, rather than parsing request credentials."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0x48734",
+      "evidence_id": "ev_e6550c36c4e02f234f8d84dd8eaea8aea87e7dee15b9d26ebfd36312686997c1",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "State getter reads internal global state; used by the admission callback."
+    },
+    {
+      "component_id": "rtos",
+      "procedure_query": "0x401ad4",
+      "evidence_id": "ev_98952b8902c33d0c3c74c96805a36f6d07252dd6829d99a73126a07826ab28ea",
+      "operation": "procedure_pseudo_code",
+      "provider": {
+        "name": "Ghidra",
+        "version": "12.1.4"
+      },
+      "level": "static-analysis",
+      "analyst_observation": "RTOS channel preparation includes launch paths for Linux remote API services."
+    }
+  ],
+  "supplementary_checks": [
+    {
+      "subject": "RTOS receiver at 0x000A6A40",
+      "method": "Exact-address ARM disassembly",
+      "observation": "START_SESSION handled separately; ordinary commands compare the current token. Two mismapped decompilations were excluded."
+    },
+    {
+      "subject": "Linux startup and account configuration",
+      "method": "Extracted regular-file inspection",
+      "observation": "inittab -> rcS -> S50telnet starts telnetd; root has UID 0, shell /bin/sh and an empty shadow password field."
+    }
+  ],
+  "coverage_limits": [
+    "No network file read/write reproduction.",
+    "No live Wi-Fi credential query.",
+    "No full indirect-branch recovery.",
+    "No full installed firmware hash."
+  ]
+}

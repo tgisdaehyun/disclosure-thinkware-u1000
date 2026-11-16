@@ -1,0 +1,18 @@
+# Raw inputs and private investigation material do not belong in this repo.
+*.bin
+*.zip
+*.mce
+*.mp4
+*.MP4
+*.mkv
+*.pcap
+*.pcapng
+*.har
+*.pem
+*.key
+.env
+.env.*
+rootfs/
+private/
+raw-logs/
+__pycache__/

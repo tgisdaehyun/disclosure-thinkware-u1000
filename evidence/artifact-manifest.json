@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "reviewed_artifact_label": "Thinkware U1000 1.00.18",
+  "hash_algorithm": "SHA-256",
+  "components": [
+    {
+      "id": "archive",
+      "name": "u1000_1_1.00.18.zip",
+      "sha256": "8a30708e012a93697bf25ac6c82959280a8080fe81041702b96c9039d9c39772"
+    },
+    {
+      "id": "rtos",
+      "name": "main RTOS payload (partition 0)",
+      "sha256": "e71f6f704c8f10579613e374848bfe6ca2b2fd0bc83363f342816c4fcbf925c0",
+      "architecture": "ARM little endian",
+      "analysis_load_base": "0x00020000",
+      "original_package_payload_offset": "0x330"
+    },
+    {
+      "id": "rootfs",
+      "name": "SquashFS payload (partition 4)",
+      "sha256": "9116ee031a03cc55752e72a6c58bb26e9961ca0e8cce15fe804c44959c84e2f1"
+    },
+    {
+      "id": "linux-data-library",
+      "name": "usr/lib/libremoteapidatadaemon.so.1",
+      "sha256": "a88ad238a16385fa2977937cded335b5ce1b8eb85b5ad323dbcaeae7a9658ce8",
+      "architecture": "AArch64",
+      "analysis_address_bias": "0x00100000"
+    }
+  ],
+  "limitations": [
+    "No firmware binaries are included.",
+    "The live camera firmware was not fully read back or hashed.",
+    "A selected 32-byte RTOS code prefix matched the analyzed payload; this is not whole-image identity verification."
+  ],
+  "original_static_inputs_unchanged": true
+}

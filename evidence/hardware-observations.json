@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "observation_date_utc": "2026-11-16",
+  "authorization": "Device owner authorized local network diagnosis.",
+  "device_model_response": "U1000",
+  "network": "Owner-controlled local hotspot, camera in station mode; access through an authorized relay.",
+  "installed_firmware_full_version_verified": false,
+  "installed_firmware_full_hash_verified": false,
+  "observations": [
+    {
+      "id": "HW-01",
+      "component": "Telnet TCP 23",
+      "observed": "Username root led to a shell without a password prompt. id reported uid=0(root).",
+      "result": "confirmed-in-test-configuration",
+      "transcript": "telnet-root-excerpt.txt"
+    },
+    {
+      "id": "HW-02",
+      "component": "Local management TCP 7878 / 8787",
+      "observed": "Session setup, APP_CONNECT, and basic model/device/system/liveview queries accepted without a separate owner password.",
+      "result": "confirmed-for-basic-session-and-status-only"
+    },
+    {
+      "id": "HW-03",
+      "component": "RTSP TCP 554",
+      "observed": "OPTIONS returned 200; DESCRIBE /live returned 404. Streaming requests were acknowledged without a usable video stream.",
+      "result": "video-not-obtained"
+    },
+    {
+      "id": "HW-04",
+      "component": "Root shell and RTOS memory",
+      "observed": "Read-only inspection of system information and selected physical RTOS memory succeeded. A selected code prefix matched the analyzed image. Sensor-buffer reads were not validated as fresh measurements.",
+      "result": "selected-memory-read-confirmed-only"
+    }
+  ],
+  "not_performed": [
+    "Network GET_FILE reproduction",
+    "Network PUT_FILE reproduction",
+    "Live wifi_info query",
+    "Uploaded-file code execution",
+    "Factory-reset production-baseline control",
+    "Working RTSP video interception"
+  ],
+  "privacy": "Raw private logs, real network addresses, device identifiers, live credentials, recordings and GPS data are not included.",
+  "hardware_configuration": "Owner-controlled research unit; no service or firmware patch installed to enable Telnet.",
+  "factory_reset_baseline_tested": false
+}
